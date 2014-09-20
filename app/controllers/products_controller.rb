@@ -8,9 +8,12 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
+  # This show def will load the show view with the instance variables called.
 
   def new
+
   end
+  # This new def will load the new view with the instance variables called.
 
   def create
   end

@@ -2,7 +2,8 @@
 
 <% @products.each do |product| %>
 <section>
-	<h3><%= product.title %></h3>
+	<h3><%= link_to product.title, product_path(product) %></h3>
+	<!-- you can shorten product_path(product) to simply: product --> 
 	<p><%= product.description %></p>
 </section>
 <% end %>

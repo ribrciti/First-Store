@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'products',     to: 'products#index', as: 'products'
   get 'products/:id', to: 'products#show',  as: 'product'
+  get 'products/new', to: 'products#new',   as: 'product_new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
