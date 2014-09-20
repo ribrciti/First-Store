@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   # which is the file:  app/views/products/index.html.erb
   # This view now has access to the @product varialble
   def show
+    @product = Product.find(params[:id])
   end
 
   def new
