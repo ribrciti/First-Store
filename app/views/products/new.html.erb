@@ -3,6 +3,17 @@
 <!-- Use a Rails helper (form_for) to build form.  -->
 
 <%= form_for @product do |f| %>
+	<% if @product.errors.any? %>
+		<p>There were <%= pluralize @product.errors.count, 'error' %> that kept your product from being added</p>
+		<ul>
+    	<% @product.errors.full_messages.each do |msg| %>
+      	<li><%= msg %></li>
+  		<% end %>
+    </ul>
+  </div>
+<% end %>
+
+
 	<div>
 		<%= f.label :title %> 
 		<br>
