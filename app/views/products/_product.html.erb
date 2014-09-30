@@ -1,0 +1,33 @@
+<section>
+<h3><%= link_to product.title, product %></h3>
+<% if product.image_filename.present? %>
+	<p>
+		<%= image_tag product.image_filename, height: '200' %>
+	</p>
+<% end %>
+
+<p><%= product.descroption %></p>
+
+<p>
+	<strong>Price:</strong>
+	<%= number_to_currency product.price %>
+</p>
+
+<p>
+	<strong>Stock Quantity:</strong>
+	<%= number_to_human product.stock_quantity %>
+</p>
+
+<% if product.category.present? %>
+	<p>
+		<strong>Category:</strong>
+		<%= product.category.name %>
+	</p>
+<% end %>
+
+<p>
+	<%= link_to 'edit', edit_product_path(product) %> 
+	<%= link_to 'delete', delete_product_path(product), method: :delete %> 
+</p>
+<hr>
+</section>
