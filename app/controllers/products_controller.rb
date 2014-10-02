@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to root_path
-  end     # We alway redirec to the root after we have deleted.
+  end     # We always redirect to the root after we have deleted.
 
 private
   def product_params
